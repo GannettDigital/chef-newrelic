@@ -32,4 +32,5 @@ newrelic_agent_python 'new python agent' do
   cross_application_tracer_enable NewRelic.to_boolean(node['newrelic']['application_monitoring']['cross_application_tracer']['enable']) unless node['newrelic']['application_monitoring']['cross_application_tracer']['enable']
   feature_flag node['newrelic']['python_agent']['feature_flag'] unless node['newrelic']['python_agent']['feature_flag'].nil?
   thread_profiler_enable NewRelic.to_boolean(node['newrelic']['application_monitoring']['thread_profiler']['enable']) unless node['newrelic']['application_monitoring']['thread_profiler']['enable'].nil?
+  labels node['newrelic']['application_monitoring']['labels'] unless node['newrelic']['application_monitoring']['labels'].nil?
 end
