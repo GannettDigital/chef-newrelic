@@ -2,6 +2,11 @@
 
 This file is used to list changes made in each version (>= 2.11.0) of the newrelic cookbook.
 
+
+## v3.0.2 (2017-01-27)
+
+- Brian Lieberman- updated python agent lwrp to remove test app
+
 ## v3.0.1 (2016-06-15)
 
 - Al Kemner updated newrelic python resource to support labels

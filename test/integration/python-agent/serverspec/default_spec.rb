@@ -13,7 +13,7 @@ describe file('/etc/yum.repos.d/newrelic.repo'), :if => os[:family] == 'redhat' 
   it { should contain 'baseurl=http://artifactory.gannettdigital.com/artifactory/yum-newrelic/' }
 end
 
-describe command('pip show newrelic') do
+describe command('/usr/local/bin/pip show newrelic') do
   its(:exit_status) { should eq 0 }
 end
 
