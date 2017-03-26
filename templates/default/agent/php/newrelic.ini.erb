@@ -660,3 +660,19 @@ newrelic.high_security = <%= @resource.high_security %>
 <% @resource.additional_config.each do |config, value|%>
 <%= config %> = "<%= value %>"
 <% end %>
+
+;
+; Setting: newrelic.labels
+; Type   : string
+; Scope  : per-directory
+; Default: ""
+; Info  : A dictionary of label names and values for categories that will be
+;          applied to the data sent from this agent. May also be expressed as
+;          a semicolon delimited string of colon-separated pairs;
+;          for example, newrelic.labels = "Server:One;Data Center:Primary"
+;
+<% if @resource.labels.nil? %>
+;newrelic.labels = ""
+<% else %>
+newrelic.labels = "<%= @resource.labels %>"
+<% end %>
