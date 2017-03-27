@@ -11,6 +11,10 @@ describe file('/etc/yum.repos.d/newrelic.repo'), :if => os[:family] == 'redhat' 
   it { should exist }
   it { should contain 'baseurl=http://artifactory.gannettdigital.com/artifactory/yum-newrelic/' }
 end
+describe file('/etc/php.d/newrelic.ini'), :if => os[:family] == 'redhat' do
+  it { should exist }
+  it { should contain 'newrelic.labels = ' }
+end
 describe file('/etc/apt/sources.list.d/newrelic.list'), :if => %w(debian ubuntu).include?(os[:family]) do
   it { is_expected.to be_file }
 end
