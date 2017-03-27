@@ -3,6 +3,10 @@
 This file is used to list changes made in each version (>= 2.11.0) of the newrelic cookbook.
 
 
+## v3.0.3 (2017-04-27)
+
+- Stephen Potter updated newrelic php resource to support labels
+
 ## v3.0.2 (2017-01-27)
 
 - Brian Lieberman- updated python agent lwrp to remove test app
